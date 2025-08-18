@@ -2,6 +2,7 @@ import streamlit as st
 from langchain.chat_models import ChatOpenAI
 from langchain_core.prompts import PromptTemplate
 from langchain.schema import HumanMessage
+from langchain.chat_models import ChatOpenAI
 
 # ---------- Streamlit page setup ----------
 st.set_page_config(
