@@ -22,7 +22,7 @@ def generate_response(topic):
     # Initialize chat model
     llm = ChatOpenAI(
         openai_api_key=openai_api_key,
-        model="gpt-5-nano",  # chat model
+        model="gpt-3.5-turbo",  # chat model
     )
 
     # Prompt template
