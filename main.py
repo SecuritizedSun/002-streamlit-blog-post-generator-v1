@@ -14,7 +14,7 @@ openai_api_key = st.sidebar.text_input(
 )
 
 def generate_response(topic):
-    llm = OpenAI(openai_api_key=openai_api_key)
+    llm = OpenAI(openai_api_key=openai_api_key, model="gpt-5-nano")
     template = """
     As experienced startup and venture capital writer, 
     generate a 400-word blog post about {topic}
