@@ -1,8 +1,8 @@
 import streamlit as st
-from langchain.chat_models import ChatOpenAI
 from langchain_core.prompts import PromptTemplate
 from langchain.schema import HumanMessage
-from langchain.chat_models import ChatOpenAI
+from langchain_community.chat_models import ChatOpenAI
+
 
 # ---------- Streamlit page setup ----------
 st.set_page_config(
@@ -23,7 +23,6 @@ def generate_response(topic):
     llm = ChatOpenAI(
         openai_api_key=openai_api_key,
         model="gpt-5-nano",  # chat model
-        temperature=0
     )
 
     # Prompt template
@@ -44,7 +43,7 @@ def generate_response(topic):
     query = prompt.format(topic=topic)
 
     # Call chat model
-    response = llm([HumanMessage(content=query)])
+    response = llm.invoke([HumanMessage(content=query)])
 
     # Display output
     st.markdown("### Generated Blog Post")
