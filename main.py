@@ -47,7 +47,7 @@ def generate_response(topic):
 
     # Display output
     st.markdown("### Generated Blog Post")
-    st.write(response[0].content)
+    st.write(response.content)
 
 # ---------- Input from user ----------
 topic_text = st.text_input("Enter topic:")
